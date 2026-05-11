@@ -3,95 +3,970 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roteiros para Vender Sem Aparecer</title>
+  <title>Roteiros para Vender Sem Aparecer | 100 roteiros prontos + prompts de IA</title>
+  <meta name="description" content="Kit com 100 roteiros prontos, prompts de IA, chamadas para venda, ideias de produtos e calendário de 30 dias para criar vídeos e vender online sem aparecer." />
+  <meta name="theme-color" content="#0b0f19" />
+
   <style>
-    :root { --bg:#0b0f19; --card:#111827; --muted:#9ca3af; --text:#f9fafb; --green:#22c55e; --green2:#16a34a; --line:#1f2937; --yellow:#facc15; }
+    :root {
+      --bg:#0b0f19;
+      --bg2:#030712;
+      --card:#111827;
+      --card2:#0f172a;
+      --muted:#9ca3af;
+      --text:#f9fafb;
+      --soft:#d1d5db;
+      --green:#22c55e;
+      --green2:#16a34a;
+      --green3:#86efac;
+      --line:#1f2937;
+      --yellow:#facc15;
+      --orange:#fb923c;
+      --red:#f87171;
+      --shadow:0 24px 70px rgba(0,0,0,.34);
+    }
+
     * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter, Arial, sans-serif; background:radial-gradient(circle at top,#1f2937 0,#0b0f19 45%); color:var(--text); }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      margin:0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(34,197,94,.20) 0, rgba(34,197,94,0) 30%),
+        radial-gradient(circle at 85% 12%, rgba(250,204,21,.12) 0, rgba(250,204,21,0) 26%),
+        linear-gradient(180deg,#111827 0,#0b0f19 32%,#030712 100%);
+      color:var(--text);
+    }
+
     a { color:inherit; }
-    .wrap { width:min(1080px,92%); margin:0 auto; }
-    header { padding:22px 0; border-bottom:1px solid var(--line); }
-    .brand { font-weight:800; letter-spacing:-.02em; }
-    .hero { padding:72px 0 42px; display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center; }
-    .tag { display:inline-flex; background:rgba(34,197,94,.12); color:#86efac; border:1px solid rgba(34,197,94,.35); padding:8px 12px; border-radius:999px; font-size:14px; margin-bottom:18px; }
-    h1 { font-size:clamp(38px,6vw,68px); line-height:.96; margin:0 0 20px; letter-spacing:-.06em; }
-    .lead { font-size:20px; color:#d1d5db; line-height:1.5; margin-bottom:28px; }
-    .cta { display:inline-block; background:linear-gradient(135deg,var(--green),var(--green2)); color:#04130a; font-weight:900; text-decoration:none; padding:18px 26px; border-radius:16px; box-shadow:0 16px 40px rgba(34,197,94,.2); }
-    .price { margin-top:12px; color:#d1d5db; font-size:16px; }
-    .mock { background:linear-gradient(180deg,#111827,#030712); border:1px solid #374151; border-radius:26px; padding:26px; box-shadow:0 28px 90px rgba(0,0,0,.35); }
-    .mock h2 { font-size:34px; margin:0 0 12px; }
-    .mock ul { padding-left:20px; color:#d1d5db; line-height:1.8; }
-    section { padding:52px 0; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .card { background:rgba(17,24,39,.82); border:1px solid var(--line); border-radius:22px; padding:22px; }
-    .card h3 { margin-top:0; }
-    .muted { color:var(--muted); line-height:1.6; }
-    .section-title { font-size:36px; letter-spacing:-.04em; margin:0 0 14px; }
-    .list { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:22px; }
-    .item { background:#0f172a; border:1px solid #1e293b; padding:16px; border-radius:16px; }
-    .offer { text-align:center; background:linear-gradient(180deg,#111827,#030712); border:1px solid #374151; border-radius:30px; padding:42px 22px; }
-    .offer .new { font-size:56px; font-weight:900; color:#86efac; margin:8px 0 20px; }
-    details { background:#111827; border:1px solid #1f2937; border-radius:16px; padding:16px 18px; margin:10px 0; }
-    summary { cursor:pointer; font-weight:800; }
-    footer { padding:30px 0; color:#6b7280; text-align:center; border-top:1px solid var(--line); }
-    @media(max-width:800px) { .hero { grid-template-columns:1fr; padding-top:44px; } .grid,.list { grid-template-columns:1fr; } }
+
+    .wrap {
+      width:min(1120px,92%);
+      margin:0 auto;
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(14px);
+      background:rgba(11,15,25,.76);
+      border-bottom:1px solid rgba(31,41,55,.8);
+    }
+
+    .topbar {
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+
+    .brand-mark {
+      width:34px;
+      height:34px;
+      border-radius:11px;
+      background:linear-gradient(135deg,var(--green),var(--yellow));
+      box-shadow:0 10px 28px rgba(34,197,94,.22);
+    }
+
+    .nav-cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+      padding:12px 16px;
+      border-radius:999px;
+      background:rgba(34,197,94,.12);
+      border:1px solid rgba(134,239,172,.35);
+      color:#bbf7d0;
+    }
+
+    .hero {
+      padding:74px 0 42px;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:38px;
+      align-items:center;
+    }
+
+    .tag {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(34,197,94,.12);
+      color:#bbf7d0;
+      border:1px solid rgba(34,197,94,.35);
+      padding:9px 13px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+
+    .tag::before {
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--green);
+      box-shadow:0 0 0 6px rgba(34,197,94,.12);
+    }
+
+    h1 {
+      font-size:clamp(40px,6vw,72px);
+      line-height:.94;
+      margin:0 0 20px;
+      letter-spacing:-.07em;
+    }
+
+    .highlight {
+      color:#bbf7d0;
+    }
+
+    .lead {
+      font-size:20px;
+      color:#e5e7eb;
+      line-height:1.55;
+      margin:0 0 26px;
+      max-width:680px;
+    }
+
+    .hero-bullets {
+      display:grid;
+      gap:10px;
+      margin:22px 0 28px;
+      padding:0;
+      list-style:none;
+    }
+
+    .hero-bullets li {
+      display:flex;
+      gap:10px;
+      color:#d1d5db;
+      line-height:1.45;
+    }
+
+    .check {
+      flex:0 0 23px;
+      width:23px;
+      height:23px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:rgba(34,197,94,.16);
+      color:#86efac;
+      font-weight:900;
+      font-size:14px;
+      border:1px solid rgba(134,239,172,.25);
+    }
+
+    .cta-row {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:14px;
+    }
+
+    .cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      color:#04130a;
+      font-weight:950;
+      text-decoration:none;
+      padding:18px 26px;
+      border-radius:16px;
+      box-shadow:0 18px 44px rgba(34,197,94,.24);
+      border:0;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .cta:hover {
+      transform:translateY(-2px);
+      box-shadow:0 22px 54px rgba(34,197,94,.32);
+    }
+
+    .secondary-note {
+      color:#cbd5e1;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .price {
+      margin-top:14px;
+      color:#d1d5db;
+      font-size:15px;
+    }
+
+    .price strong {
+      color:#86efac;
+      font-weight:900;
+    }
+
+    .mock {
+      background:linear-gradient(180deg,rgba(17,24,39,.96),rgba(3,7,18,.98));
+      border:1px solid rgba(148,163,184,.24);
+      border-radius:30px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mock::before {
+      content:"";
+      position:absolute;
+      inset:-120px -120px auto auto;
+      width:220px;
+      height:220px;
+      background:rgba(34,197,94,.16);
+      filter:blur(20px);
+      border-radius:999px;
+    }
+
+    .mock-inner {
+      position:relative;
+      z-index:1;
+    }
+
+    .mock-badge {
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:900;
+      background:rgba(250,204,21,.13);
+      color:#fde68a;
+      border:1px solid rgba(250,204,21,.28);
+      margin-bottom:14px;
+    }
+
+    .mock h2 {
+      font-size:34px;
+      letter-spacing:-.04em;
+      margin:0 0 12px;
+    }
+
+    .mock ul {
+      padding:0;
+      margin:20px 0 0;
+      list-style:none;
+      color:#d1d5db;
+      display:grid;
+      gap:12px;
+    }
+
+    .mock li {
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      line-height:1.45;
+      background:rgba(15,23,42,.72);
+      border:1px solid rgba(30,41,59,.85);
+      padding:12px;
+      border-radius:14px;
+    }
+
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .stat {
+      background:rgba(3,7,18,.72);
+      border:1px solid rgba(31,41,55,.9);
+      border-radius:17px;
+      padding:14px;
+      text-align:center;
+    }
+
+    .stat strong {
+      display:block;
+      font-size:24px;
+      color:#86efac;
+      letter-spacing:-.03em;
+    }
+
+    .stat span {
+      color:#a7b0be;
+      font-size:13px;
+    }
+
+    section { padding:56px 0; }
+
+    .section-head {
+      max-width:780px;
+      margin-bottom:24px;
+    }
+
+    .eyebrow {
+      color:#86efac;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:12px;
+      font-weight:950;
+      margin:0 0 10px;
+    }
+
+    .section-title {
+      font-size:clamp(31px,4vw,44px);
+      line-height:1.04;
+      letter-spacing:-.055em;
+      margin:0 0 14px;
+    }
+
+    .muted {
+      color:var(--muted);
+      line-height:1.68;
+      margin:0;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .card {
+      background:rgba(17,24,39,.78);
+      border:1px solid rgba(31,41,55,.95);
+      border-radius:24px;
+      padding:23px;
+      box-shadow:0 14px 38px rgba(0,0,0,.18);
+    }
+
+    .card h3 {
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.03em;
+    }
+
+    .icon {
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(34,197,94,.13);
+      color:#86efac;
+      font-weight:950;
+      margin-bottom:15px;
+      border:1px solid rgba(134,239,172,.20);
+    }
+
+    .pain {
+      border-color:rgba(248,113,113,.22);
+      background:linear-gradient(180deg,rgba(127,29,29,.16),rgba(17,24,39,.76));
+    }
+
+    .pain .icon {
+      background:rgba(248,113,113,.12);
+      color:#fecaca;
+      border-color:rgba(248,113,113,.22);
+    }
+
+    .list {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .item {
+      background:#0f172a;
+      border:1px solid #1e293b;
+      padding:17px;
+      border-radius:17px;
+      color:#dbe3ee;
+      line-height:1.48;
+    }
+
+    .item strong {
+      color:#f9fafb;
+    }
+
+    .split {
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .steps {
+      counter-reset:step;
+      display:grid;
+      gap:14px;
+    }
+
+    .step {
+      counter-increment:step;
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:14px;
+      align-items:start;
+      background:rgba(15,23,42,.88);
+      border:1px solid #1e293b;
+      border-radius:20px;
+      padding:16px;
+    }
+
+    .step::before {
+      content:counter(step);
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      color:#052e16;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:950;
+    }
+
+    .step h3 {
+      margin:0 0 6px;
+      font-size:18px;
+    }
+
+    .proof {
+      background:
+        radial-gradient(circle at top left, rgba(34,197,94,.12), rgba(34,197,94,0) 32%),
+        rgba(17,24,39,.68);
+      border-top:1px solid rgba(31,41,55,.8);
+      border-bottom:1px solid rgba(31,41,55,.8);
+    }
+
+    .testimonials {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:26px;
+    }
+
+    .testimonial {
+      background:#0f172a;
+      border:1px solid rgba(148,163,184,.16);
+      border-radius:24px;
+      padding:22px;
+      min-height:210px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .stars {
+      color:var(--yellow);
+      letter-spacing:1px;
+      font-size:15px;
+      margin-bottom:12px;
+    }
+
+    .testimonial p {
+      color:#d7dee9;
+      line-height:1.62;
+      margin:0 0 18px;
+    }
+
+    .person {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#e5e7eb;
+      font-weight:900;
+    }
+
+    .avatar {
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#334155,#111827);
+      border:1px solid rgba(148,163,184,.22);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#86efac;
+      font-size:13px;
+    }
+
+    .disclaimer {
+      margin-top:14px;
+      color:#94a3b8;
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .offer {
+      position:relative;
+      overflow:hidden;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 0,rgba(34,197,94,.18),rgba(34,197,94,0) 34%),
+        linear-gradient(180deg,#111827,#030712);
+      border:1px solid rgba(148,163,184,.24);
+      border-radius:32px;
+      padding:46px 24px;
+      box-shadow:var(--shadow);
+    }
+
+    .offer .new {
+      font-size:clamp(48px,7vw,72px);
+      font-weight:950;
+      color:#86efac;
+      margin:10px 0 18px;
+      letter-spacing:-.06em;
+    }
+
+    .offer-list {
+      max-width:720px;
+      margin:22px auto 28px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      text-align:left;
+    }
+
+    .offer-list div {
+      background:rgba(15,23,42,.74);
+      border:1px solid rgba(30,41,59,.88);
+      border-radius:15px;
+      padding:13px;
+      color:#dbe3ee;
+    }
+
+    .safe-buy {
+      margin-top:16px;
+      color:#cbd5e1;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    details {
+      background:#111827;
+      border:1px solid #1f2937;
+      border-radius:16px;
+      padding:17px 18px;
+      margin:10px 0;
+    }
+
+    summary {
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:-.01em;
+    }
+
+    details p {
+      margin-top:12px !important;
+    }
+
+    footer {
+      padding:32px 0;
+      color:#6b7280;
+      text-align:center;
+      border-top:1px solid var(--line);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .sticky-mobile {
+      display:none;
+    }
+
+    @media(max-width:900px) {
+      .hero,
+      .split {
+        grid-template-columns:1fr;
+      }
+
+      .hero {
+        padding-top:44px;
+      }
+
+      .grid,
+      .grid-2,
+      .testimonials,
+      .offer-list,
+      .list {
+        grid-template-columns:1fr;
+      }
+
+      .stats {
+        grid-template-columns:1fr;
+      }
+
+      .nav-cta {
+        display:none;
+      }
+
+      .sticky-mobile {
+        position:fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:40;
+        display:block;
+        padding:12px;
+        background:rgba(3,7,18,.88);
+        border-top:1px solid rgba(31,41,55,.9);
+        backdrop-filter:blur(14px);
+      }
+
+      .sticky-mobile .cta {
+        width:100%;
+        padding:15px 18px;
+      }
+
+      body {
+        padding-bottom:76px;
+      }
+    }
+
+    @media(max-width:460px) {
+      .topbar {
+        min-height:62px;
+      }
+
+      .brand {
+        font-size:14px;
+      }
+
+      h1 {
+        letter-spacing:-.06em;
+      }
+
+      .mock,
+      .card,
+      .offer,
+      .testimonial {
+        border-radius:22px;
+      }
+
+      .hero {
+        padding-bottom:28px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header><div class="wrap brand">Roteiros para Vender Sem Aparecer</div></header>
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Roteiros para Vender Sem Aparecer</span>
+      </div>
+      <a class="nav-cta" href="#comprar">Acessar por R$ 19,90</a>
+    </div>
+  </header>
+
   <main>
     <div class="wrap hero">
       <div>
-        <div class="tag">Produto digital - acesso imediato</div>
-        <h1>Crie vídeos todos os dias para vender online, mesmo sem aparecer.</h1>
-        <p class="lead">100 roteiros prontos, prompts de IA, chamadas para venda, ideias de produtos e um calendário de 30 dias para você publicar com mais clareza e menos travamento.</p>
-        <a href="#comprar" class="cta">Quero acessar agora</a>
-        <div class="price">Acesso imediato por R$ 19,90.</div>
-      </div>
-      <div class="mock">
-        <h2>O que você recebe</h2>
-        <ul>
-          <li>100 roteiros prontos para vídeos curtos</li>
-          <li>30 chamadas para link da bio</li>
-          <li>50 ideias de produtos digitais e afiliados</li>
-          <li>Prompts para roteiro, narração e cenas</li>
-          <li>Calendário de conteúdo para 30 dias</li>
-          <li>Modelo de página de vendas</li>
+        <div class="tag">Produto digital com acesso imediato</div>
+
+        <h1>Venda online com vídeos curtos, <span class="highlight">sem aparecer e sem travar no roteiro.</span></h1>
+
+        <p class="lead">
+          Um kit direto ao ponto com roteiros prontos, prompts de IA, chamadas para venda e um calendário de 30 dias para você publicar conteúdo com mais clareza, constância e intenção de venda.
+        </p>
+
+        <ul class="hero-bullets">
+          <li><span class="check">✓</span><span>Ideal para quem quer criar vídeos para TikTok, Instagram Reels e Shorts sem depender de câmera no rosto.</span></li>
+          <li><span class="check">✓</span><span>Ajuda você a sair do “não sei o que postar” e transformar ideias em conteúdos com começo, meio e chamada para ação.</span></li>
+          <li><span class="check">✓</span><span>Pode ser adaptado para produtos digitais, afiliados, serviços, produtos físicos e páginas de venda.</span></li>
         </ul>
+
+        <div class="cta-row">
+          <a href="https://pay.kirvano.com/981d8a29-6d31-4519-b1aa-ff088df31e27" class="cta">Quero acessar agora →</a>
+          <div class="secondary-note">Pagamento pela Kirvano.<br />Receba o material digital após a compra.</div>
+        </div>
+
+        <div class="price">Hoje por apenas <strong>R$ 19,90</strong>. Comece com uma estrutura pronta em vez de tentar criar tudo do zero.</div>
+      </div>
+
+      <div class="mock" aria-label="Resumo do produto">
+        <div class="mock-inner">
+          <div class="mock-badge">Kit prático para conteúdo e vendas</div>
+          <h2>O que você recebe</h2>
+          <p class="muted">Material pensado para acelerar a criação de conteúdo e reduzir o bloqueio na hora de vender.</p>
+
+          <ul>
+            <li><span class="check">✓</span><span><strong>100 roteiros prontos</strong> para vídeos curtos com gancho, desenvolvimento e chamada final.</span></li>
+            <li><span class="check">✓</span><span><strong>30 chamadas para link da bio</strong> para conduzir o público para sua oferta.</span></li>
+            <li><span class="check">✓</span><span><strong>50 ideias de produtos</strong> digitais, afiliados, serviços e ofertas simples para testar.</span></li>
+            <li><span class="check">✓</span><span><strong>Prompts de IA</strong> para roteiro, narração, ideias de cenas, títulos e variações.</span></li>
+            <li><span class="check">✓</span><span><strong>Calendário de 30 dias</strong> para publicar com sequência e não depender de inspiração.</span></li>
+            <li><span class="check">✓</span><span><strong>Modelo de página de vendas</strong> para estruturar sua oferta com mais clareza.</span></li>
+          </ul>
+
+          <div class="stats">
+            <div class="stat"><strong>100</strong><span>roteiros</span></div>
+            <div class="stat"><strong>30</strong><span>dias de conteúdo</span></div>
+            <div class="stat"><strong>R$19,90</strong><span>acesso digital</span></div>
+          </div>
+        </div>
       </div>
     </div>
-    <section><div class="wrap">
-      <h2 class="section-title">Para quem é esse kit?</h2>
-      <p class="muted">Para quem quer vender online, divulgar produtos digitais, afiliados, serviços ou produtos físicos, mas trava na hora de criar o conteúdo.</p>
-      <div class="grid">
-        <div class="card"><h3>Sem aparecer</h3><p class="muted">Use narração com IA, texto na tela, imagens de apoio, tela gravada ou cenas simples.</p></div>
-        <div class="card"><h3>Sem começar do zero</h3><p class="muted">Escolha um roteiro, adapte para sua oferta e publique com uma chamada clara.</p></div>
-        <div class="card"><h3>Com direção</h3><p class="muted">Os roteiros são organizados por dor, produto, afiliado, IA, objeções e fechamento.</p></div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">O problema</p>
+          <h2 class="section-title">Você não precisa de mais uma ideia solta. Precisa de um caminho para postar e vender.</h2>
+          <p class="muted">
+            Muita gente até tem vontade de vender online, mas trava em três pontos: não sabe o que falar, tem vergonha de aparecer e não consegue manter frequência. O kit foi criado para atacar exatamente esses bloqueios.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card pain">
+            <div class="icon">!</div>
+            <h3>“Não sei o que postar”</h3>
+            <p class="muted">Você abre o editor, pensa em gravar, mas perde tempo tentando inventar um roteiro do zero.</p>
+          </div>
+
+          <div class="card pain">
+            <div class="icon">!</div>
+            <h3>“Tenho vergonha de aparecer”</h3>
+            <p class="muted">Você quer começar, mas não quer colocar seu rosto em todos os vídeos ou falar diretamente para a câmera.</p>
+          </div>
+
+          <div class="card pain">
+            <div class="icon">!</div>
+            <h3>“Posto, mas não vendo”</h3>
+            <p class="muted">O conteúdo até sai, mas falta intenção comercial, chamada para ação e conexão com a dor do público.</p>
+          </div>
+        </div>
       </div>
-    </div></section>
-    <section><div class="wrap">
-      <h2 class="section-title">Você vai parar de depender de inspiração</h2>
-      <div class="list">
-        <div class="item">Vídeos com gancho, dor, valor e chamada para compra.</div>
-        <div class="item">Prompts para transformar ideias em roteiros rapidamente.</div>
-        <div class="item">Calendário de 30 dias para manter consistência.</div>
-        <div class="item">Modelos adaptáveis para produto digital, afiliado ou serviço.</div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Como funciona</p>
+          <h2 class="section-title">Você escolhe um roteiro, adapta para sua oferta e publica.</h2>
+          <p class="muted">
+            A ideia não é complicar. É deixar você com uma base pronta para testar vídeos, validar temas e conduzir as pessoas para sua página, link da bio ou produto de afiliado.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h3>Escolha o objetivo do vídeo</h3>
+              <p class="muted">Atrair atenção, quebrar objeção, explicar uma dor, mostrar solução ou chamar para compra.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Use o roteiro como base</h3>
+              <p class="muted">Copie a estrutura, ajuste palavras para seu nicho e deixe a mensagem mais natural para seu público.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Crie sem precisar aparecer</h3>
+              <p class="muted">Use narração com IA, texto na tela, imagens de apoio, gravação de tela, banco de vídeos ou cenas simples.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Direcione para a oferta</h3>
+              <p class="muted">Finalize com uma chamada clara para o link da bio, página de vendas, WhatsApp ou checkout.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div></section>
-    <section id="comprar"><div class="wrap offer">
-      <h2 class="section-title">Acesse o kit completo hoje</h2>
-      <p class="muted">Use como ponto de partida para seus vídeos, páginas, ofertas e testes de venda.</p>
-      <div class="new">R$ 19,90</div>
-      <a href="https://pay.kirvano.com/981d8a29-6d31-4519-b1aa-ff088df31e27" class="cta">Comprar agora</a>
-    </div></section>
-    <section><div class="wrap">
-      <h2 class="section-title">Perguntas frequentes</h2>
-      <details><summary>Preciso aparecer nos vídeos?</summary><p class="muted">Não. O kit foi pensado para vídeos narrados, imagens de apoio, tela gravada e cenas simples.</p></details>
-      <details><summary>Preciso saber editar?</summary><p class="muted">Não precisa ser profissional. Roteiro claro, texto na tela e cortes simples já são suficientes para começar.</p></details>
-      <details><summary>Serve para afiliados?</summary><p class="muted">Sim. Você pode adaptar para produtos digitais, produtos físicos, serviços e afiliados.</p></details>
-      <details><summary>Isso garante vendas?</summary><p class="muted">Não. O material entrega estrutura, mas resultados dependem de produto, público, oferta, consistência e testes.</p></details>
-    </div></section>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Para quem é</p>
+          <h2 class="section-title">Feito para quem quer começar simples, testar rápido e vender com conteúdo.</h2>
+          <p class="muted">
+            Você pode usar o kit mesmo sem equipe, sem edição avançada e sem experiência criando vídeos todos os dias.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>Afiliados e iniciantes</h3>
+            <p class="muted">Para divulgar ofertas sem depender apenas de anúncios ou posts aleatórios.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Produtos digitais</h3>
+            <p class="muted">Para vender e-books, mentorias, aulas, planilhas, templates, guias e materiais simples.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>Serviços e produtos físicos</h3>
+            <p class="muted">Para explicar benefícios, gerar desejo, quebrar objeções e levar o público para o atendimento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">O que muda na prática</p>
+          <h2 class="section-title">Você para de publicar no improviso e começa a seguir uma estrutura.</h2>
+        </div>
+
+        <div class="list">
+          <div class="item"><strong>Ganchos mais fortes:</strong> comece o vídeo prendendo atenção nos primeiros segundos.</div>
+          <div class="item"><strong>Conteúdo com intenção:</strong> cada roteiro já nasce com uma função dentro da venda.</div>
+          <div class="item"><strong>Menos bloqueio criativo:</strong> use os prompts para gerar variações em poucos minutos.</div>
+          <div class="item"><strong>Mais consistência:</strong> siga o calendário de 30 dias e evite ficar sem tema.</div>
+          <div class="item"><strong>Mais clareza na oferta:</strong> aprenda a conectar dor, solução, benefício e chamada para ação.</div>
+          <div class="item"><strong>Formato adaptável:</strong> use com narração, legenda, tela gravada, imagens e vídeos de apoio.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Feedbacks</p>
+          <h2 class="section-title">Uma estrutura simples para quem precisa destravar.</h2>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>“Eu não sabia por onde começar. Ter os roteiros prontos me ajudou a entender o que falar e como terminar o vídeo com uma chamada mais clara.”</p>
+            </div>
+            <div class="person"><span class="avatar">C1</span><span>Cliente iniciante</span></div>
+          </div>
+
+          <div class="testimonial">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>“Gostei porque não é um material cheio de teoria. Dá para pegar uma ideia, adaptar para o produto e já transformar em vídeo curto.”</p>
+            </div>
+            <div class="person"><span class="avatar">C2</span><span>Criador de conteúdo</span></div>
+          </div>
+
+          <div class="testimonial">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>“O calendário de 30 dias facilita muito. Antes eu postava quando dava vontade, agora tenho uma sequência para seguir.”</p>
+            </div>
+            <div class="person"><span class="avatar">C3</span><span>Vendedor online</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comprar">
+      <div class="wrap offer">
+        <p class="eyebrow">Oferta de acesso</p>
+        <h2 class="section-title">Comece hoje com uma estrutura pronta por menos de R$ 20.</h2>
+        <p class="muted">
+          Em vez de passar horas pensando no que postar, você recebe um kit organizado para criar, testar e publicar conteúdos com intenção de venda.
+        </p>
+
+        <div class="offer-list">
+          <div>✓ 100 roteiros prontos para vídeos curtos</div>
+          <div>✓ Prompts de IA para criar variações</div>
+          <div>✓ Calendário de conteúdo para 30 dias</div>
+          <div>✓ Chamadas para link da bio e checkout</div>
+          <div>✓ Ideias de produtos e ofertas</div>
+          <div>✓ Acesso digital após a compra</div>
+        </div>
+
+        <div class="new">R$ 19,90</div>
+
+        <a href="https://pay.kirvano.com/981d8a29-6d31-4519-b1aa-ff088df31e27" class="cta">Comprar agora →</a>
+
+        <div class="safe-buy">
+          Compra processada pela Kirvano. Produto digital entregue conforme as instruções da plataforma após a confirmação do pagamento.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Dúvidas comuns</p>
+          <h2 class="section-title">Perguntas frequentes</h2>
+        </div>
+
+        <details>
+          <summary>Preciso aparecer nos vídeos?</summary>
+          <p class="muted">Não. O kit foi pensado para vídeos com narração, texto na tela, imagens de apoio, gravação de tela, vídeos de banco e cenas simples.</p>
+        </details>
+
+        <details>
+          <summary>Preciso saber editar?</summary>
+          <p class="muted">Não precisa ser profissional. Um vídeo com roteiro claro, legenda, narração e cortes simples já é suficiente para começar a testar conteúdo.</p>
+        </details>
+
+        <details>
+          <summary>Serve para afiliados?</summary>
+          <p class="muted">Sim. Você pode adaptar os roteiros para produtos digitais, produtos físicos, serviços, páginas de venda, WhatsApp ou link de afiliado.</p>
+        </details>
+
+        <details>
+          <summary>O material é indicado para quem está começando?</summary>
+          <p class="muted">Sim. A proposta é justamente ajudar quem ainda trava na criação de conteúdo e precisa de modelos prontos para sair do zero.</p>
+        </details>
+
+        <details>
+          <summary>Vou receber o quê exatamente?</summary>
+          <p class="muted">Você recebe um material digital com roteiros, prompts, chamadas, ideias de produtos, calendário de conteúdo e estrutura de página de vendas.</p>
+        </details>
+
+        <details>
+          <summary>Isso garante vendas?</summary>
+          <p class="muted">Não. Nenhum material sério pode garantir vendas. O kit entrega estrutura e direção, mas seus resultados dependem do produto, público, oferta, consistência, testes e execução.</p>
+        </details>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap">Roteiros para Vender Sem Aparecer - produto digital com acesso imediato.</div></footer>
+
+  <footer>
+    <div class="wrap">
+      Roteiros para Vender Sem Aparecer — produto digital com acesso imediato.<br />
+      Este produto não promete renda, resultado financeiro ou vendas garantidas.
+    </div>
+  </footer>
+
+  <div class="sticky-mobile">
+    <a href="https://pay.kirvano.com/981d8a29-6d31-4519-b1aa-ff088df31e27" class="cta">Acessar por R$ 19,90</a>
+  </div>
 </body>
 </html>
