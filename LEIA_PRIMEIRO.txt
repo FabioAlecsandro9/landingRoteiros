@@ -1,0 +1,26 @@
+LANDING PAGE - ROTEIROS PARA VENDER SEM APARECER
+
+Arquivos incluídos:
+- index.html: página de vendas.
+- Dockerfile: configuração do container Nginx.
+- nginx.conf: configuração do servidor web.
+- docker-compose.yml: configuração para subir o container na VPS.
+
+PASSO 1
+Antes de publicar, abra o arquivo index.html e substitua:
+COLE_AQUI_SEU_LINK_DA_KIRVANO
+
+pelo link real do checkout da Kirvano.
+
+PASSO 2
+Envie todos os arquivos desta pasta para a VPS.
+
+PASSO 3
+Dentro da pasta, rode:
+docker compose up -d --build
+
+PASSO 4
+Acesse:
+http://IP_DA_SUA_VPS:8080
+
+Se usar domínio ou subdomínio, aponte ele para a VPS e configure o proxy/reverse proxy para a porta 8080.
